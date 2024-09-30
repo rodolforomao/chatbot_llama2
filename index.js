@@ -14,6 +14,11 @@ const PORT = process.env.PORT || 3000;
 app.use(cors());
 app.use(bodyParser.json());
 
+app.get('/ok', (req, res) => {
+    res.send('Your app is runing.');
+});
+
+
 app.post('/chat', async (req, res) => {
     const { message } = req.body;
 
