@@ -14,7 +14,7 @@ const PORT = process.env.PORT || 3000;
 app.use(cors());
 app.use(bodyParser.json());
 
-version = '1.00.007'
+version = '1.00.008'
 
 app.get('/ok', (req, res) => {
     res.send('Your app is runing. version=' + version);
@@ -27,8 +27,8 @@ app.post('/chat', async (req, res) => {
         const response = await hf.textGeneration({
             //model: 'meta-llama/Llama-2-7b-chat-hf', // Substitua pelo modelo que você deseja usar
             //model: 'EleutherAI/gpt-neo-1.3B', // muito fraco
-            model: 'EleutherAI/gpt-j-6B',
-            //model: 'bigscience/bloom-560m', 
+            //model: 'EleutherAI/gpt-j-6B', // The model EleutherAI/gpt-j-6b is too large to be loaded automatically (24GB > 10GB)
+            model: 'bigscience/bloom-560m', 
             //model: 'EleutherAI/gpt-neo-125M', // Muito fraco 
             inputs: question,
             parameters: {
