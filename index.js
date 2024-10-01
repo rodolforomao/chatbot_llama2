@@ -14,8 +14,10 @@ const PORT = process.env.PORT || 3000;
 app.use(cors());
 app.use(bodyParser.json());
 
+version = '1.00.001'
+
 app.get('/ok', (req, res) => {
-    res.send('Your app is runing.');
+    res.send('Your app is runing. version=' + version);
 });
 
 
