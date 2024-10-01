@@ -28,7 +28,8 @@ app.post('/chat', async (req, res) => {
             //model: 'meta-llama/Llama-2-7b-chat-hf', // Substitua pelo modelo que você deseja usar
             //model: 'EleutherAI/gpt-neo-1.3B', // Replace with a free model
             //model: 'EleutherAI/gpt-j-6B',
-            model: 'bigscience/bloom-560m', // Replace with a smaller, free model
+            //model: 'bigscience/bloom-560m', // Replace with a smaller, free model
+            model: 'EleutherAI/gpt-neo-125M', 
             inputs: question,
             parameters: {
                 temperature: 0.7, // Optional, you can adjust model parameters as needed
