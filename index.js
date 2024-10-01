@@ -25,6 +25,12 @@ app.post('/chat', async (req, res) => {
         const response = await hf.textGeneration({
             model: 'meta-llama/Llama-2-7b-chat-hf', // Substitua pelo modelo que você deseja usar
             inputs: question,
+            parameters: {
+                temperature: 0.7, // Optional, you can adjust model parameters as needed
+            },
+            headers: {
+                Authorization: `Bearer ${config.token}`, // Include your API token in the headers
+            }
         });
 
         res.json({ response: response.generated_text });
