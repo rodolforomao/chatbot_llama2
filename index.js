@@ -34,7 +34,8 @@ app.post('/chat', async (req, res) => {
             //model: 'EleutherAI/gpt-neo-2.7B',
             //model: 'facebook/blenderbot-400M', // doesn´t exists
             //model: 'EleutherAI/gpt-neo-2.7B',
-            model: 'PartAI/Dorna-Llama3-8B-Instruct',
+            //model: 'PartAI/Dorna-Llama3-8B-Instruct', // {"error":"\"The model PartAI/Dorna-Llama3-8B-Instruct is too large to be loaded automatically (16GB > 10GB). Please use Spaces (https://huggingface.co/spaces) or Inference Endpoints (https://huggingface.co/inference-endpoints).\"","details":{}}
+            model: 'mrm8488/bertin-gpt-j-6B-ES-8bit',
             inputs: question,
             parameters: {
                 temperature: 0.7, // Optional, you can adjust model parameters as needed
